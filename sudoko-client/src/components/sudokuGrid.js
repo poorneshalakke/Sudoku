@@ -1,20 +1,19 @@
 import React from 'react';
+import './sudokuGrid.css'; 
 
-const SudokuGrid = ({ puzzle, onChange }) => {
+const SudokuGrid = ({ puzzle, onChange }) => {  
   return (
-    <div className="sudoku-grid">
+    <div className="grid">
       {puzzle.map((row, rowIndex) => (
-        <div key={rowIndex} className="row">
+        <div className="row" key={rowIndex}>
           {row.map((cell, colIndex) => (
             <input
-              key={colIndex}
+              key={`${rowIndex}-${colIndex}`}
               type="number"
               value={cell || ''}
               onChange={(e) => onChange(rowIndex, colIndex, e.target.value)}
               min="1"
               max="5"
-              className={cell === 0 ? 'editable' : 'readonly'}
-              disabled={cell !== 0}
             />
           ))}
         </div>

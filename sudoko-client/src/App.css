@@ -1,3 +1,10 @@
+.App{
+  background-color: aqua;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .sudoku-grid {
   display: grid;
   grid-template-columns: repeat(5, 50px);
@@ -35,11 +42,16 @@ button {
   margin: 5px;
   font-size: 16px;
   cursor: pointer;
+  background-color: #e57c7c;
 }
 
 .message {
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 30px;
   font-weight: bold;
-  color: #333;
+  color: #2707f5;
+}
+h1{
+  color: red;
+  font-weight: bold;
 }
